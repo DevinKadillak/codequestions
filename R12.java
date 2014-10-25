@@ -5,48 +5,28 @@ cs160 programming assignments import java.util.Arrays;
 public class R12 {
  
     public static double[] swapArray(double[] swap){
-	int inArrayLength = swap.length;
+	int inArrayLength = swap.length - 1;
 	double[] outArray = new double[swap.length];
 	for(int i = 0; i < swap.length; i++)
 	    {
+		// Take the first element of the swap array, increase the counter and put it into the last element of the array
 		outArray[inArrayLength] = swap[i];
 		inArrayLength--;
 	    }
+	    
 	return outArray;
     }
 }
 
 public static void main(String[] args) {
-    // TODO Auto-generated method stub
-    double[] grades = {81.2, 92.5, 48.9, 78.8};
-    int[] numbers = {12, 42, 33, 67, 92, 58};
-    String[] arguments = new String[9];
-    System.out.println(grades.length);
-    System.out.println(numbers.length);
-    System.out.println(arguments.length);
-    System.out.println(grades[3]);
-    System.out.println(grades[1]);
-    System.out.println(numbers[2]);
-    numbers[0]=99;
-    grades[3]=90.5;
-    arguments[6]="maze7.txt";
-    for(int i=0;i<grades.length;i++){
-    System.out.print(grades[i]+",");
-    }
-    System.out.println();
-    for(int n=0; n<numbers.length;n++){
-        System.out.print(numbers[n]+" ");
-    }
-    System.out.println();
-    for(int a=0; a<arguments.length;a++){
-        System.out.print(arguments[a]+"_");
-    }
-    System.out.println();
-    System.out.println(Arrays.toString(grades));
-    System.out.println(Arrays.toString(numbers));
-    System.out.println(Arrays.toString(arguments));
-    System.out.println(R12.arrayAverage(grades));
-    System.out.print(R12.swapArray(grades));
+    public static void main(String[] args) {
+	double[] practiceArr = {1.0, 2.0, 3.0};
+	double[] outArr = swapArray(practiceArr);
+
+	// You have to loop through the array to print it out.
+	for (int i = 0; i < practiceArr.length; i++){
+	    System.out.print(outArr[i]);
+	}
 
     }
 }
